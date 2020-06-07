@@ -15,6 +15,13 @@
 
     <h1>Teste</h1>
     
+    <form action="php/login.php" method="POST">
+    
+        <input type="text" id="usuario" name="usuario" placeholder="Usuario">
+        <input type="password" id="senha" name="senha" placeholder="Senha">
+        <button>Logar</button>
+
+    </form>
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
