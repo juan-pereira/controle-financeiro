@@ -12,9 +12,10 @@ if(empty($_POST['nome']) || empty($_POST['sobrenome']) || empty($_POST['usuario'
 
     //Variveis
     $nome = $_POST['nome'];
-    $sobrenome = $_POST['sobrenome'];
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
+    $idade = $_POST['idade'];
+    $sexo = $_POST['sexo'];
 
 
     $query = "insert into usuario values(null, '{$usuario}', '{$nome}', md5('{$senha}'))";

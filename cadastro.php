@@ -22,7 +22,7 @@
                     <div class="row card-body">
 
                        <div class="col-md-3 border-right">
-                            <a href="index.php" class="logo"><img style="margin-top: 30px;" src="virtualizacao.png" alt="Virtualização de Desktop" title="Virtualização de Desktop"></a>
+                            <a href="index.php" class="logo"><img style="margin-top: 30px;" src="controlefinanceiro.png" alt="Virtualização de Desktop" title="Virtualização de Desktop"></a>
                        </div>
 
                        <div class="col-md-9">
@@ -31,23 +31,20 @@
 
                             <div class="col-12 mt-5">
 
-                                <form action="php/cadastrarlogin.php" method="post" name="cadastro" autocomplete="on">                                    
+                                <form action="php/cadastraLogin.php" method="post" name="cadastro" autocomplete="on">                                    
                                     <div class="form-row">
                                         <div class="col">
                                             <input type="text" class="form-control" name="nome" placeholder="Nome" required="required">
-                                        </div>
-                                        <div class="col">
-                                            <input type="text" class="form-control" name="sobrenome" placeholder="Sobrenome" required="required">
                                         </div>
                                     </div>
                                     
                                     <div class="form-row mt-4">
                                         <div class="col">
                                           <select name="sexo" class="form-control">
-                                            <option selected>Sexo</option>  
-                                            <option>Masculino</option>
-                                            <option>Feminino</option>
-                                            <option>Outro</option>
+                                            <option selected> Sexo </option>  
+                                            <option value="M"> Masculino </option>
+                                            <option value="F"> Feminino </option>
+                                            <option value="O"> Outro </option>
                                           </select>
                                         </div>
                                         

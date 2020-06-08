@@ -54,7 +54,7 @@
 
                                 <div class="row">
                                     <div class="col-6 offset-3 mt-4">
-                                        <p> Ainda não é cadastrado ? <a href="cadastro.html">Clique aqui</a></p>
+                                        <p> Ainda não é cadastrado ? <a href="cadastro.php">Clique aqui</a></p>
                                     </div>
                                 </div>
 
