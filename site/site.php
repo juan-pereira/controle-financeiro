@@ -1,5 +1,5 @@
 <?php
-	require("../php/session.php");
+require("../php/session.php");
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<!--<link rel="stylesheet" type="text/css" href="css/reset.css"> -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 
 </head>
 
@@ -22,7 +22,7 @@
 	<header class="cabecalho">
 		<h1 class="titulo-principal">Controle Financeiro</h1>
 
-		<h4>Bem vindo - <?=$_SESSION['nome']?></h4>
+		<h4 class="titulo-principal">Bem vindo - <?=$_SESSION['nome']?></h4>
 
 		<br>
 
@@ -82,16 +82,16 @@
 			var elems = document.querySelectorAll('select');
 			var instances = M.FormSelect.init(elems, options);
 		});
-  $(document).ready(function(){
-	  $('select').formSelect();
-	  
-	  $(".ValoresItens").maskMoney({
-         prefix: "R$",
-         decimal: ",",
-         thousands: "."
-     });
+		$(document).ready(function(){
+			$('select').formSelect();
+			
+			$(".ValoresItens").maskMoney({
+				prefix: "R$",
+				decimal: ",",
+				thousands: "."
+			});
 
-  });    
-</script>
+		});    
+	</script>
 </body>
 </html>
