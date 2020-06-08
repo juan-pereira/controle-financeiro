@@ -22,7 +22,7 @@
                     <div class="row card-body">
 
                        <div class="col-md-3 border-right">
-                            <img style="margin-top: 60px;" src="virtualizacao.png" alt="Virtualização de Desktop" title="Virtualização de Desktop">
+                            <img style="margin-top: 60px;" src="controlefinanceiro.png" alt="Virtualização de Desktop" title="Virtualização de Desktop">
                        </div>
 
                        <div class="col-md-9">
