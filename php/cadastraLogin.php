@@ -3,8 +3,8 @@
 //Inclui a conexao com o banco de dados
 require('conexao.php');
 
-if(empty($_POST['nome']) || empty($_POST['sobrenome']) || empty($_POST['usuario']) || empty($_POST['senha'])){
-    header('Location: ../cadastro.html ');
+if(empty($_POST['nome']) || empty($_POST['usuario']) || empty($_POST['senha'])){
+    header('Location: ../cadastro.php ');
     exit();
 }else{
 
@@ -18,7 +18,7 @@ if(empty($_POST['nome']) || empty($_POST['sobrenome']) || empty($_POST['usuario'
     $sexo = $_POST['sexo'];
 
 
-    $query = "insert into usuario values(null, '{$usuario}', '{$nome}', md5('{$senha}'))";
+    $query = "insert into usuario values(null, '{$usuario}', '{$nome}', md5('{$senha}'), '{$sexo}', '{$idade}')";
 
     if(mysqli_query($con, $query)){
         //Gravou então recupera usuario e id e loga no sistema
@@ -41,14 +41,14 @@ if(empty($_POST['nome']) || empty($_POST['sobrenome']) || empty($_POST['usuario'
             exit();
         }else{
             mysqli_close($con);
-            header('Location: ../cadastro.html?error=error');
+            header('Location: ../cadastro.php?error=error');
             exit();            
         }
 
     }else{
         //Não gravou 
         mysqli_close($con);
-        header('Location: ../cadastro.html?error=error');
+        header('Location: ../cadastro.php?error=error');
         exit();
     }
 

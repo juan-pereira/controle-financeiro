@@ -39,14 +39,14 @@
                                     </div>
                                     
                                     <div class="form-row mt-4">
-                                        <div class="col">
-                                          <select name="sexo" class="form-control">
-                                            <option selected> Sexo </option>  
-                                            <option value="M"> Masculino </option>
-                                            <option value="F"> Feminino </option>
-                                            <option value="O"> Outro </option>
-                                          </select>
-                                        </div>
+                                    <div class="col">
+                                        <select name="sexo" class="form-control">
+                                        <option selected> Sexo </option>  
+                                        <option value="M"> Masculino </option>
+                                        <option value="F"> Feminino </option>
+                                        <option value="O"> Outro </option>
+                                        </select>
+                                    </div>
                                         
                                         <div class="col">
                                             <input type="number" class="form-control" name="idade" placeholder="Idade" required="required">
