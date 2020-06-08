@@ -1,0 +1,16 @@
+.centralizar{
+    margin-top: 20% !important;
+}
+
+.centralizar-logo{
+    margin-top: 70% !important;
+}
+
+.logo{
+    color: black;
+}
+
+.logo:hover{
+    text-decoration: none;
+    color: black;
+}
