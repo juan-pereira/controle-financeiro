@@ -6,3 +6,7 @@ body{
 	font-size: 3em;
 	text-align: center;
 }
+
+.form-center{
+	margin: 0 auto;
+}
