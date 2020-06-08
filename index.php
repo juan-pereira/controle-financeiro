@@ -1,66 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sistema Financeiro</title>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<!-- css -->
-	<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<!--<link rel="stylesheet" type="text/css" href="css/reset.css"> -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
 
 </head>
+<body style="margin-top: -130px;" class="container">
 
-<body class="container">
+       <div class="row centralizar">
 
-	<header class="cabecalho">
-		<h1 class="titulo-principal">Controle Financeiro</h1>
-		<div class="input-field col s12">
-			<select>
-				<option value="" disabled selected>Selecione o mês desejado</option>
-				<option value="1">Janeiro</option>
-				<option value="2">Fevereiro</option>
-				<option value="3">Março</option>
-				<option value="4">Abril</option>
-				<option value="5">Maio</option>
-				<option value="6">Junho</option>
-				<option value="7">Julho</option>
-				<option value="8">Agosto</option>
-				<option value="9">Setembro</option>
-				<option value="10">Outubro</option>
-				<option value="11">Novembro</option>
-				<option value="12">Dezembro</option>
-			</select>
-			<label>Materialize Select</label>
-		</div>
-	</header>
+            <div class="col-10 ml-5 offset-2">
 
-	<main>
-		<div class="row">
-			<div class="input-field col s12 m6 l3">
-				<input id="salario" type="text" class="validate">
-				<label for="salario">Salário</label>
-			</div>
-			<div class="input-field col s12 m6 l3">
-				<input id="fixos" type="text" class="validate">
-				<label for="fixos">Gastos Fixos</label>
-			</div>
-			<div class="input-field col s12 m6 l3">
-				<input id="temporarios" type="text" class="validate">
-				<label for="temporarios">Gastos Temporários</label>
-			</div>
-			<div class="input-field col s12 m6 l3">
-				<input id="last_name" type="text" class="validate">
-				<label for="last_name">Last Name</label>
-			</div>
-		</div>
-	</main>
+                <div class="card">
+                    <div class="row card-body">
+
+                       <div class="col-md-3 border-right">
+                            <img style="margin-top: 60px;" src="virtualizacao.png" alt="Virtualização de Desktop" title="Virtualização de Desktop">
+                       </div>
+
+                       <div class="col-md-9">
+
+                            <h3 class="text-center pb-2 border-bottom">Login</h3>
+
+                            <div class="col-12 mt-5">
+
+                                <form action="php/login.php" method="post" name="login" autocomplete="on">                                    
+                                    <div class="row">
+                                        <div class="col-6 offset-3 input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">@</div>
+                                            </div>
+                                            <input type="text" class="form-control" id="usuario" name="usuario" maxlength="30" placeholder="Usuário" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 offset-3 input-group mt-4">
+                                            <input type="password" class="form-control" id="senha" name="senha" maxlength="30" placeholder="Senha" required="required">                                       
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 offset-3 mt-4">
+                                            <input type="submit" class="btn btn-outline-primary col-12" value="Logar">
+                                        </div>
+                                    </div>                                
+                                </form>
+
+                                <div class="row">
+                                    <div class="col-6 offset-3 mt-4">
+                                        <p> Ainda não é cadastrado ? <a href="cadastro.html">Clique aqui</a></p>
+                                    </div>
+                                </div>
+
+                                
+                                    <?php                                 
+            
+                                        if(!empty($_GET['error'])){
+
+                                            echo "<div class='row'>";
+                                            echo     "<div class='col-6 offset-3 mt-4 '>";
+                                            echo        "<p class='text-center alert alert-danger'>Usuario ou Senha incorreto !</p>";
+                                            echo   "</div>";
+                                            echo "</div>";                                           
+                                        }
+                                    
+                                    ?>
+                                
+                                
+
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+       </div>
 
 
-	<!-- JS -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
