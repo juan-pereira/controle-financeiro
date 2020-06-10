@@ -31,3 +31,10 @@ body{
 	margin: 0 auto;
     margin-top: 35px;
 }
+
+.help{
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	list-style-position:inside;
+}
