@@ -1,0 +1,77 @@
+<?php
+require("../php/session.php");
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sistema Financeiro</title>
+
+	<!-- css -->
+	<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+</head>
+
+<body class="container body">
+	<nav class="nav">
+		<div class="nav-wrapper">
+			<a href="site.php" class="brand-logo"><img class="img-nav" src="../controlefinanceiro.png"></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="help.html">Ajuda</a></li>
+				<li><a href="../php/deslogar.php">Desconectar</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<header class="cabecalho">
+		<h1 class="titulo-principal">Controle Financeiro</h1>
+
+		<h4 class="titulo-principal">Ajuda</h4>
+
+		<br><br>
+
+	</header>
+
+	<main class="help">
+		<p>Trabalhamos para que você possa ajustar a sua vida financeira, estamos sempre buscando melhorar nossa aplicação para que você sempre consiga manter seu dinheiro muito bem controlado.</p>
+		<br>
+		<p>Para utilizar nosso serviço você irá seguir os seguintes passos:</p>
+		<ol>
+			<li>Escolher o mês no qual deseja inserir os dados;</li>
+			<br>
+			<li>Inserir o valor líquido do seu salário;</li>
+			<br>
+			<li>Inserir o valor dos seus gastos fixos;</li>
+			<br>
+			<li>Inserir o valor dos seus gastos temporários;</li>
+			<br>
+			<li>Clicar no botão "Calcular" e aguardar que o sistema retorno o resultado.</li>
+		</ol>
+	</main>
+	<!-- JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			var elems = document.querySelectorAll('select');
+			var instances = M.FormSelect.init(elems, options);
+		});
+		$(document).ready(function(){
+			$('select').formSelect();
+
+			$(".ValoresItens").maskMoney({
+				prefix: "R$",
+				decimal: ",",
+				thousands: "."
+			});
+
+		});    
+	</script>
+</body>
+</html>
