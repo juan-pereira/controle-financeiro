@@ -17,42 +17,30 @@ require("../php/session.php");
 
 </head>
 
-<body class="container">
+<body class="container body">
+	<nav class="nav">
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo"><img class="img-nav" src="../controlefinanceiro.png"></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="help.html">Ajuda</a></li>
+				<li><a href="../php/deslogar.php">Desconectar</a></li>
+			</ul>
+		</div>
+	</nav>
 
 	<header class="cabecalho">
 		<h1 class="titulo-principal">Controle Financeiro</h1>
 
 		<h4 class="titulo-principal">Bem vindo - <?=$_SESSION['nome']?></h4>
 
-		<br>
-
-		<a href="../php/deslogar.php">Desconectar</a>
+		
 
 		<br><br>
 
-
-		<div class="input-field col s12">
-			<select>
-				<option value="0" selected>Selecione o mês desejado</option>
-				<option value="1">Janeiro</option>
-				<option value="2">Fevereiro</option>
-				<option value="3">Março</option>
-				<option value="4">Abril</option>
-				<option value="5">Maio</option>
-				<option value="6">Junho</option>
-				<option value="7">Julho</option>
-				<option value="8">Agosto</option>
-				<option value="9">Setembro</option>
-				<option value="10">Outubro</option>
-				<option value="11">Novembro</option>
-				<option value="12">Dezembro</option>
-			</select>
-			<label>Mês</label>
-		</div>
 	</header>
 
 	<main>
-		<div class="row">
+		<div class="row form-center">
 			<div class="input-field col s12 m6 l3">
 				<input id="salario" type="text" class="validate ValoresItens">
 				<label for="salario">Salário</label>
@@ -65,14 +53,15 @@ require("../php/session.php");
 				<input id="temporarios" type="text" class="validate ValoresItens">
 				<label for="temporarios">Gastos Temporários</label>
 			</div>
-			<div class="input-field col s12 m6 l3">
-				<input id="last_name" type="text" class="validate">
-				<label for="last_name">Last Name</label>
+		</div>
+		<button class="btn waves-effect waves-light botao center" type="submit" name="action">Calcular</button>
+		<div class="row form-center">
+			<div class="input-field col s12 m6 l3 enviar">
+				<input disabled value="Restante" id="disabled" type="text" class="validate">
+				<label style="text-align: center;" for="disable">Salário Restante</label>
 			</div>
 		</div>
 	</main>
-
-
 	<!-- JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -84,7 +73,7 @@ require("../php/session.php");
 		});
 		$(document).ready(function(){
 			$('select').formSelect();
-			
+
 			$(".ValoresItens").maskMoney({
 				prefix: "R$",
 				decimal: ",",
