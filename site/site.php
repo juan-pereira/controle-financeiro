@@ -12,7 +12,6 @@ require("../php/session.php");
 	<!-- css -->
 	<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<!--<link rel="stylesheet" type="text/css" href="css/reset.css"> -->
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 
 </head>
@@ -29,53 +28,85 @@ require("../php/session.php");
 	</nav>
 
 	<header class="cabecalho">
-		<h1 class="titulo-principal">Controle Financeiro</h1>
+		<h2 class="titulo-principal">Controle Financeiro</h2>
 
-		<h4 class="titulo-principal">Bem vindo - <?=$_SESSION['nome']?></h4>
-
-		
+		<h5 class="titulo-principal">Bem vindo - <?=$_SESSION['nome']?></h5>		
 
 		<br><br>
 
 	</header>
 
 	<main>
-		<div class="input-field col s12">
-			<select>
-				<option value="" disabled selected>Selecione o mês desejado</option>
-				<option value="1">Janeiro</option>
-				<option value="2">Fevereiro</option>
-				<option value="3">Março</option>
-				<option value="4">Abril</option>
-				<option value="5">Maio</option>
-				<option value="6">Junho</option>
-				<option value="7">Julho</option>
-				<option value="8">Agosto</option>
-				<option value="9">Setembro</option>
+	
+
+		<div class="col s12">
+			<select id="mes">
+				<option value="0" selected>Selecione o mês desejado</option>
+				<option value="01">Janeiro</option>
+				<option value="02">Fevereiro</option>
+				<option value="03">Março</option>
+				<option value="04">Abril</option>
+				<option value="05">Maio</option>
+				<option value="06">Junho</option>
+				<option value="07">Julho</option>
+				<option value="08">Agosto</option>
+				<option value="09">Setembro</option>
 				<option value="10">Outubro</option>
 				<option value="11">Novembro</option>
 				<option value="12">Dezembro</option>
 			</select>			
-		</div>
-	</header>
+		</div>		
 
-	<main>
 		<form id="form">
+
+		<div class="row">
+			<div class="input-field col s12 m6 l3">
+				<input id="salario" type="text" class="validate invalid ValoresItens" required>
+				<label for="salario">Salário</label>
+			</div>
+			<div class="input-field col s12 m6 l3">
+				<input id="fixos" type="text" class="validate invalid ValoresItens" required>
+				<label for="fixos">Gastos Fixos</label>
+			</div>
+			<div class="input-field col s12 m6 l3">
+				<input id="temporarios" type="text" class="validate invalid ValoresItens" required>
+				<label for="temporarios">Gastos Temporários</label>
+			</div>
+			<div class="input-field col s12 m6 l3">
+				<button type='submit' class="waves-effect waves-light btn">Gravar</button>
+			</div>
+		</div>
+		
+		</form>
+
+
+		<div class="row esconde" id="calculos">
+			<div>
+				<h5 class="center-align">Referente ao mês de <i id="nomeMes"></i></h5>
+			</div>
 			<div class="row">
-				<div class="input-field col s12 m6 l3">
-					<input id="salario" type="text" class="validate ValoresItens">
-					<label for="salario">Salário</label>
-				</div>
-				<div class="input-field col s12 m6 l3">
-					<input id="fixos" type="text" class="validate ValoresItens">
-					<label for="fixos">Gastos Fixos</label>
-				</div>
-				<div class="input-field col s12 m6 l3">
-					<input id="temporarios" type="text" class="validate ValoresItens">
-					<label for="temporarios">Gastos Temporários</label>
+				<div class="col l6">
+					<div id="piechart"></div>
+				</div>			
+				<div class="col l6">
+					<div class="row">
+						<p>Salario : <i id="salario_resultado"></i></p>
+					</div>
+					<div class="row">
+						<p>Gastos Fixos : <i id="fixo_resultado"></i></p>
+					</div>
+					<div class="row">
+						<p>Gasto Temporarios : <i id="temporario_resultado"></i></p>
+					</div>
+					<div class="row">
+						<p>Sobrou : <i id="sobras_resultado"></i></p>
+					</div>
 				</div>
 			</div>
-		</form>
+			
+		</div>
+		
+
 	</main>
 	<!-- JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -88,5 +119,6 @@ require("../php/session.php");
 		});		 
 	</script>
 	<script src="../js/script.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </body>
 </html>

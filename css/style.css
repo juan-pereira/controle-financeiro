@@ -38,3 +38,11 @@ body{
 	margin: 0 auto;
 	list-style-position:inside;
 }
+
+.mostra{
+	display:block;
+}
+
+.esconde{
+	display:none;
+}
