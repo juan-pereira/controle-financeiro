@@ -1,5 +1,14 @@
 body{
 	font-family: 'Arvo', sans-serif;
+	background: #F0F8FF;
+}
+
+.nav{
+	background: #BAD7F1;
+}
+
+.img-nav{
+	margin-top: -74px;
 }
 
 .titulo-principal{
@@ -8,5 +17,17 @@ body{
 }
 
 .form-center{
+	display: flex;
+}
+
+.botao{
+	background: #327EC3;
 	margin: 0 auto;
+    display: block;
+    margin-top: 30px; 
+}
+
+.enviar{
+	margin: 0 auto;
+    margin-top: 35px;
 }

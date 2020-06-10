@@ -1,5 +1,5 @@
 <?php
-	require("../php/session.php");
+require("../php/session.php");
 ?>
 
 <!DOCTYPE html>
@@ -17,23 +17,32 @@
 
 </head>
 
-<body class="container">
+<body class="container body">
+	<nav class="nav">
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo"><img class="img-nav" src="../controlefinanceiro.png"></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="help.html">Ajuda</a></li>
+				<li><a href="../php/deslogar.php">Desconectar</a></li>
+			</ul>
+		</div>
+	</nav>
 
 	<header class="cabecalho">
 		<h1 class="titulo-principal">Controle Financeiro</h1>
 
-		<h4>Bem vindo - <?=$_SESSION['nome']?></h4>
+		<h4 class="titulo-principal">Bem vindo - <?=$_SESSION['nome']?></h4>
 
-		<br>
-
-		<a href="../php/deslogar.php">Desconectar</a>
+		
 
 		<br><br>
 
+	</header>
 
+	<main>
 		<div class="input-field col s12">
-			<select id="mes" >
-				<option value="0" selected>Selecione o mês desejado</option>
+			<select>
+				<option value="" disabled selected>Selecione o mês desejado</option>
 				<option value="1">Janeiro</option>
 				<option value="2">Fevereiro</option>
 				<option value="3">Março</option>
@@ -68,8 +77,6 @@
 			</div>
 		</form>
 	</main>
-
-
 	<!-- JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -78,8 +85,7 @@
 		document.addEventListener('DOMContentLoaded', function() {
 			var elems = document.querySelectorAll('select');
 			var instances = M.FormSelect.init(elems);
-		});
-		 
+		});		 
 	</script>
 	<script src="../js/script.js"></script>
 </body>
