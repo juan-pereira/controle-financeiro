@@ -13,7 +13,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<!--<link rel="stylesheet" type="text/css" href="css/reset.css"> -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 
 </head>
 
@@ -32,7 +32,7 @@
 
 
 		<div class="input-field col s12">
-			<select>
+			<select id="mes" >
 				<option value="0" selected>Selecione o mês desejado</option>
 				<option value="1">Janeiro</option>
 				<option value="2">Fevereiro</option>
@@ -46,30 +46,27 @@
 				<option value="10">Outubro</option>
 				<option value="11">Novembro</option>
 				<option value="12">Dezembro</option>
-			</select>
-			<label>Mês</label>
+			</select>			
 		</div>
 	</header>
 
 	<main>
-		<div class="row">
-			<div class="input-field col s12 m6 l3">
-				<input id="salario" type="text" class="validate ValoresItens">
-				<label for="salario">Salário</label>
+		<form id="form">
+			<div class="row">
+				<div class="input-field col s12 m6 l3">
+					<input id="salario" type="text" class="validate ValoresItens">
+					<label for="salario">Salário</label>
+				</div>
+				<div class="input-field col s12 m6 l3">
+					<input id="fixos" type="text" class="validate ValoresItens">
+					<label for="fixos">Gastos Fixos</label>
+				</div>
+				<div class="input-field col s12 m6 l3">
+					<input id="temporarios" type="text" class="validate ValoresItens">
+					<label for="temporarios">Gastos Temporários</label>
+				</div>
 			</div>
-			<div class="input-field col s12 m6 l3">
-				<input id="fixos" type="text" class="validate ValoresItens">
-				<label for="fixos">Gastos Fixos</label>
-			</div>
-			<div class="input-field col s12 m6 l3">
-				<input id="temporarios" type="text" class="validate ValoresItens">
-				<label for="temporarios">Gastos Temporários</label>
-			</div>
-			<div class="input-field col s12 m6 l3">
-				<input id="last_name" type="text" class="validate">
-				<label for="last_name">Last Name</label>
-			</div>
-		</div>
+		</form>
 	</main>
 
 
@@ -80,18 +77,10 @@
 	<script type="text/javascript">
 		document.addEventListener('DOMContentLoaded', function() {
 			var elems = document.querySelectorAll('select');
-			var instances = M.FormSelect.init(elems, options);
+			var instances = M.FormSelect.init(elems);
 		});
-  $(document).ready(function(){
-	  $('select').formSelect();
-	  
-	  $(".ValoresItens").maskMoney({
-         prefix: "R$",
-         decimal: ",",
-         thousands: "."
-     });
-
-  });    
-</script>
+		 
+	</script>
+	<script src="../js/script.js"></script>
 </body>
 </html>

@@ -41,10 +41,10 @@
                                     <div class="form-row mt-4">
                                     <div class="col">
                                         <select name="sexo" class="form-control">
-                                        <option selected> Sexo </option>  
-                                        <option value="M"> Masculino </option>
-                                        <option value="F"> Feminino </option>
-                                        <option value="O"> Outro </option>
+                                            <option selected> Sexo </option>
+                                            <option value="M"> Masculino </option>
+                                            <option value="F"> Feminino </option>
+                                            <option value="O"> Outro </option>
                                         </select>
                                     </div>
                                         
@@ -59,16 +59,16 @@
                                             </div>
                                             <input type="text" class="form-control" id="usuario" name="usuario" maxlength="30" placeholder="Usuário" required="required">
                                         </div>
-                                        <div class="col-6">                                      
+                                        <div class="col-6">                         
                                             <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="required">                              
-                                        </div>  
+                                        </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-6 offset-3 mt-4">
                                             <input type="submit" class="btn btn-outline-primary col-12" value="Cadastrar">
                                         </div>
-                                    </div>                                
-                                </form>                              
+                                    </div>                            
+                                </form>                           
                             </div>
                        </div>
                     </div>
